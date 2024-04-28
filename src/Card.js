@@ -10,30 +10,34 @@ const Card = () => {
     setIsVisible(!isVisible); 
   };
 
-  const handleCopy = () => {
+  const handleCopy = async () => {
     if (!navigator.clipboard) {
       alert('Die Zwischenablage ist in diesem Browser nicht verfügbar. Bitte kopieren Sie die Adresse manuell.');
       return;
     }
-  
-    navigator.permissions.query({name: "clipboard-write"}).then(result => {
+
+    try {
+      const result = await navigator.permissions.query({ name: "clipboard-write" });
       if (result.state === "granted" || result.state === "prompt") {
-        navigator.clipboard.writeText("paul.wenner@t-online.de")
-          .then(() => {
-            setEmailCopied(true);
-            setTimeout(() => {
-              setEmailCopied(false);
-            }, 2500);
-          })
-          .catch(err => {
-            console.error('Fehler beim Kopieren: ', err);
-            alert('Kopieren fehlgeschlagen. Bitte kopieren Sie die Adresse manuell.');
-          });
+        try {
+          await navigator.clipboard.writeText("paul.wenner@t-online.de");
+          setEmailCopied(true);
+          setTimeout(() => {
+            setEmailCopied(false);
+          }, 2500);
+        } catch (err) {
+          console.error('Fehler beim Kopieren: ', err);
+          alert('Kopieren fehlgeschlagen. Bitte kopieren Sie die Adresse manuell.');
+        }
       } else {
         alert('Keine Berechtigung zum Kopieren. Bitte kopieren Sie die Adresse manuell.');
       }
-    });
+    } catch (error) {
+      console.error('Fehler bei der Berechtigungsanfrage: ', error);
+      alert('Fehler bei der Überprüfung der Berechtigungen. Kopieren ist möglicherweise nicht möglich.');
+    }
   };
+
   
   return (
     <>
