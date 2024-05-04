@@ -5,40 +5,30 @@ const Card = () => {
   const [emailCopied, setEmailCopied] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  
   const toggleVisibility = () => {
     setIsVisible(!isVisible); 
   };
 
-  const handleCopy = async () => {
+  const copyTextToClipboard = async (text) => {
     if (!navigator.clipboard) {
+      console.log('Clipboard API not available');
       alert('Die Zwischenablage ist in diesem Browser nicht verfügbar. Bitte kopieren Sie die Adresse manuell.');
       return;
     }
-
     try {
-      const result = await navigator.permissions.query({ name: "clipboard-write" });
-      if (result.state === "granted" || result.state === "prompt") {
-        try {
-          await navigator.clipboard.writeText("paul.wenner@t-online.de");
-          setEmailCopied(true);
-          setTimeout(() => {
-            setEmailCopied(false);
-          }, 2500);
-        } catch (err) {
-          console.error('Fehler beim Kopieren: ', err);
-          alert('Kopieren fehlgeschlagen. Bitte kopieren Sie die Adresse manuell.');
-        }
-      } else {
-        alert('Keine Berechtigung zum Kopieren. Bitte kopieren Sie die Adresse manuell.');
-      }
-    } catch (error) {
-      console.error('Fehler bei der Berechtigungsanfrage: ', error);
-      alert('Fehler bei der Überprüfung der Berechtigungen. Kopieren ist möglicherweise nicht möglich.');
+      await navigator.clipboard.writeText(text);
+      console.log('Text erfolgreich kopiert');
+      setEmailCopied(true);
+      setTimeout(() => {
+        setEmailCopied(false);
+      }, 2500);
+      alert('E-Mail wurde in die Zwischenablage kopiert.');
+    } catch (err) {
+      console.error('Fehler beim Kopieren: ', err);
+      alert('Kopieren fehlgeschlagen. Bitte kopieren Sie die Adresse manuell.');
     }
   };
 
-  
   return (
     <>
       <div className="mobile-pic-container">
@@ -71,7 +61,7 @@ const Card = () => {
           <div className="container">
             <div className={`copy-text ${emailCopied ? 'active' : ''}`}>
               <input type="text" className="text" value="paul.wenner@t-online.de" readOnly />
-              <button onClick={handleCopy}><i className="fa fa-clone"></i></button>
+              <button onPointerUp={() => copyTextToClipboard("paul.wenner@t-online.de")}><i className="fa fa-clone"></i></button>
             </div>
           </div>
         </div>
