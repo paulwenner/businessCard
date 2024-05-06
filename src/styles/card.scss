@@ -34,20 +34,14 @@ a:visited, a:link{
   text-decoration: none;
 }
 
-html, body {
-  background: var(--back);
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-
 body{
   transition: all 0.3s ease;
+}
+
+#Card {
+  margin-top: clamp(10vh, 150px ,25vh);
+  display: block;
+  width: 100vw;
 }
 
 #container{
@@ -60,6 +54,8 @@ body{
   transform: scale(0.6);
   animation: fade_in 1s forwards;
   border-radius: 15px;
+  margin: 0 auto;
+  width: fit-content;
 
   .header{
     position: absolute;
@@ -218,6 +214,8 @@ body{
   }
 
   #mail-container{
+    scale: 0.9;
+    margin: 0 auto;
     width: 540px; 
   }
 
@@ -254,8 +252,10 @@ body{
 @media screen and (max-width: 768px) {
   #container{
     scale: 0.9;
-    margin: 50px;
-    width: 432px;
+    margin: auto;
+    width: 100vw;
+    max-width: 432px;
+    min-width: 380px;
     height: 240px;
     .left-section{
       width: 100%;
@@ -265,8 +265,10 @@ body{
 
   #mail-container{
     scale: 0.9;
-    width: 432px; 
-    margin: 50px;
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 432px;
+    min-width: 380px;
   }
 
 
@@ -430,4 +432,3 @@ body{
 .slide-in.active {
   max-height: 200px; 
 }
-

@@ -1,0 +1,34 @@
+.Seemore-toggle {
+    user-select: none;
+    position: relative;
+    color: #767676;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.6);
+    animation: fade_in 1s forwards;
+  }
+
+  #see-more-button {
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 1;
+    height: 3rem;
+    width: clamp(30%, 200px , 50%);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+
+  #Portfolio {
+    position: absolute;
+    top: 0;
+    right: 50;
+    transform: translateX(-50);
+    border-radius: 5px;
+  }

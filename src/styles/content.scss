@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+#Content-align {
+    width: 100vw;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h2 {
+    font-weight: 900;
+
+}
+
+.card img {
+    border-radius: 20px;
+}
+.card {
+    width: clamp( 50%, 768px ,100%);;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: transparent;
+    border: none;
+    color: beige;
+}
+
+#lottie {
+    height: 20vh;
+    margin-right: 10%;
+}
+
