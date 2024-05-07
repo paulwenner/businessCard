@@ -63,7 +63,7 @@ const Card = () => {
   };
   
   useEffect(() => {
-    document.body.style.backgroundColor = isFirstVisible ? "#121212" : "#212121";
+    document.body.style.backgroundColor = isFirstVisible ? "#121212" : "#141414";
     document.querySelector("#see-more-button").style.backgroundColor = isFirstVisible ? "transparent" : "#323232";
   }, [isFirstVisible]);
 
@@ -93,7 +93,7 @@ const Card = () => {
                     <p className="ml-2">paulwenner.de</p>
                     </span>
                     <p className="profile-name">Paul Wenner</p>
-                    <span className="profile-summary">Harvard CS50 zertifizierter freinschaffender Entwickler</span>
+                    <span className="profile-summary">Harvard CS50 zertifizierter freischaffender Entwickler</span>
                 </div>
                 <div className="profile-pils">
                     <span className="pils"><a href="https://www.instagram.com/_.paulwennr/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i> Instagram</a></span>
