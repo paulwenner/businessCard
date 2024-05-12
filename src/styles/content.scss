@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@media screen and (min-width: 768px) {
+    #mainCard {
+        border-radius: 5px;
+        border-top-right-radius: 35px;
+        border-top-left-radius: 35px;
+    }  
+}
+
+@media screen and (max-width: 900px) {
+    #qualiRow {
+        margin-left: 3%;
+        margin-right: 3%;
+    }  
+}
+
 .Content-align {
     width: 100vw;
     display: flex;
@@ -13,42 +28,41 @@
 h2 {
     font-size: clamp(60px, 10vw, 140px);
     font-weight: 900;
-    color: white !important; 
 }
+
+#Qualifikationen {
+    font-size: clamp(30px, 10vw, 70px);
+    font-weight: 900;
+}
+
+.card-title {
+    color: white;
+}
+
+.card-subtitle {
+    color: rgb(158, 158, 158);
+}
+
+
 
 .move-negative-50 {
     transform: translateY(-50%);
 }
 
-.card img {
-    border-radius: 20px;
-}
-
 .card {
-    width: clamp(80%, 768px, 100%);
-    
     background-color: #323232;
     border: none;
     position: relative;
-}
 
-@media screen and (min-width: 768px) {
-    .card {
-        margin-left: 40px;
-        margin-right: 40px;
+    .card-text {
+        color: white;
     }
 
-    #mainCard {
-        border-radius: 5px;
-        border-top-right-radius: 35px;
-        border-top-left-radius: 35px;
-    }
+    img {
+        border-radius: 20px;
+    } 
 }
 
-#lottie {
-    height: 20vh;
-    margin-right: 10%;
-}
 
 #profilePic {
     height: auto;
@@ -57,8 +71,12 @@ h2 {
     transform-origin: bottom center;
 }
 
+.over-Card {
+    width: clamp(80%, 768px, 100%);
+}
+
 #mainCard::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -69,3 +87,8 @@ h2 {
         linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
 }
+
+#qualiRow {
+    height: 1000px;
+}
+

@@ -152,7 +152,7 @@ const Card = () => {
                 >
                   <Content/>
             </motion.div>
-            }
+            }   
     </>
   );
 }

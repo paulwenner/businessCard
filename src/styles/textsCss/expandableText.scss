@@ -1,0 +1,20 @@
+.collapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.imageQualification {
+  max-width: 95%;
+  height: auto; 
+  display: block; 
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.imageQualification:hover {
+  -webkit-box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.34); 
+  box-shadow: 0px 0px 16px 8px rgba(0,0,0,0.34);
+}
+
