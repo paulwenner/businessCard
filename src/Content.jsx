@@ -47,7 +47,6 @@ function Content() {
             </div> 
         </div>
     </div>
-    <hr style={{color: "lightgrey"}}/>
     </>
   )
 }
