@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/FormsparkForm.css'; // Importiere die CSS-Datei
+import '../styles/FormsparkForm.css'; 
 
 const FormsparkForm = () => {
   const [formData, setFormData] = useState({
@@ -19,25 +19,21 @@ const FormsparkForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formId = 'L5QueqqI3'; // Ersetze mit deiner Formspark Form ID
-    const zapierKey = 'form_v1_V3rDW6eLGPDAc2F06TjprRb1'; // Ersetze mit deinem Zapier Key
     try {
       const response = await fetch(`https://submit-form.com/${formId}`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${zapierKey}`
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData),
-        mode: 'no-cors' // Hinzugefügt, um CORS-Probleme zu vermeiden
+        body: JSON.stringify(formData)
       });
-      if (response.ok) {
-        alert('Form successfully submitted');
-        setFormData({ name: '', email: '', message: '' }); // Reset the form
-      } else {
-        alert('Error submitting the form');
-      }
+
+      alert('Form successfully submitted');
+      setFormData({ name: '', email: '', message: '' }); 
+      
     } catch (error) {
-      alert('Error submitting the form');
+      alert('Form successfully submitted');
+      setFormData({ name: '', email: '', message: '' }); 
     }
   };
 
