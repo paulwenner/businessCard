@@ -70,7 +70,7 @@ function Content() {
             </FadeInSection>
 
             <FadeInSection>
-                <h3 id="Kontakt" className="card-title text-center mb-4">Kontakttieren Sie mich!</h3>
+                <h3 id="Kontakt" className="card-title text-center mb-4">Kontaktieren Sie mich!</h3>
                 <div className="Content-align">
                     <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
                         <FormsparkForm />
