@@ -107,12 +107,12 @@ const Card = () => {
                 <div id="mail-container"  className={`slide-in ${isVisible ? 'active' : ''}`}>
                 <div className="container">
                     <div className={`copy-text ${emailCopied ? 'active' : ''}`}>
-                    <input type="text" className="text" value="paul.wenner@t-online.de" readOnly />
+                    <input type="text" className="text" value="paul@paulwenner.de" readOnly />
                     <motion.button 
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     className={`${emailCopied ? 'push' : 'unpush'}`} 
-                    onPointerUp={() => copyTextToClipboard("paul.wenner@t-online.de")}>
+                    onPointerUp={() => copyTextToClipboard("paul@paulwenner.de")}>
                         <i className={`${emailCopied ? 'fa-solid fa-clone' : 'fa fa-clone'}`}></i>
                         </motion.button>
                     </div>
