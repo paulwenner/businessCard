@@ -48,21 +48,23 @@ function Content() {
             </div>
 
             <FadeInSection>
-                <h3 id="Qualifikationen" className="card-title text-center mb-4">Qualifikationen</h3>
-                <div className="Content-align">
-                    <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
-                        <div id="qualiRow" className="row">
-                            <div className="col-xxl-3 col-sm-12 mb-4">
-                                <ExpandableTextX50 />
-                            </div>
-                            <div className="col-xxl-3 col-sm-12 mb-4">
-                                <ExpandableTextP50 />
-                            </div>
-                            <div className="col-xxl-3 col-sm-12 mb-4">
-                                <ExpandableTextW50 />
-                            </div>
-                            <div className="col-xxl-3 col-sm-12 mb-4">
-                                <ExpandableTextCyber50 />
+                <div className="content-section">
+                    <h3 id="Qualifikationen" className="card-title text-center mb-4">Qualifikationen</h3>
+                    <div className="Content-align">
+                        <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
+                            <div id="qualiRow" className="row">
+                                <div className="col-xxl-3 col-sm-12 mb-4">
+                                    <ExpandableTextX50 />
+                                </div>
+                                <div className="col-xxl-3 col-sm-12 mb-4">
+                                    <ExpandableTextP50 />
+                                </div>
+                                <div className="col-xxl-3 col-sm-12 mb-4">
+                                    <ExpandableTextW50 />
+                                </div>
+                                <div className="col-xxl-3 col-sm-12 mb-4">
+                                    <ExpandableTextCyber50 />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -70,10 +72,12 @@ function Content() {
             </FadeInSection>
 
             <FadeInSection>
-                <h3 id="Kontakt" className="card-title text-center mb-4">Kontaktieren Sie mich!</h3>
-                <div className="Content-align">
-                    <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
-                        <FormsparkForm />
+                <div className="content-section">
+                    <h3 id="Kontakt" className="card-title text-center mb-4">Kontaktieren Sie mich!</h3>
+                    <div className="Content-align">
+                        <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
+                            <FormsparkForm />
+                        </div>
                     </div>
                 </div>
             </FadeInSection>
