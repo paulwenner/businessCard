@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Content from './Content';
 import './styles/card.scss';
 import './styles/portfolio.scss';
+import ProfilePic from "./static/img/Bewerbungsbild.webp";
 
 
 const Card = () => {
@@ -77,7 +78,7 @@ const Card = () => {
             
             <div 
             className="mobile-pic-container">
-                <img className="mobile-pic" src="https://media.licdn.com/dms/image/D4E03AQHgMht7sh3OUw/profile-displayphoto-shrink_800_800/0/1693824928881?e=1719446400&v=beta&t=kj522d2cwddRyj2L5nlkD2ReueoEEPQh6AwFPjOoHfE" alt="Profile" />
+                <img className="mobile-pic" src={ProfilePic} alt="Profile" />
             </div>
             <div 
             id="container" 
@@ -87,7 +88,7 @@ const Card = () => {
                 <div className="logo"></div>
                 </div>
                 <section className="left-section">
-                <img className="profile-pic" src="https://media.licdn.com/dms/image/D4E03AQHgMht7sh3OUw/profile-displayphoto-shrink_800_800/0/1693824928881?e=1719446400&v=beta&t=kj522d2cwddRyj2L5nlkD2ReueoEEPQh6AwFPjOoHfE" alt="Profile" />
+                <img className="profile-pic" src={ProfilePic} alt="Profile" />
                 <div className="profile-detail">
                     <span className="profile-maps">
                     <p className="ml-2">paulwenner.de</p>
