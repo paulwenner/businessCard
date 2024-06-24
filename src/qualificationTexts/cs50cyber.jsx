@@ -30,9 +30,11 @@ const ExpandableTextCyber50  = () => {
                 <h6 className="card-subtitle mb-2">Konzepte der Cybersicherheit</h6>
                 <p className={`text ${!isExpanded ? 'collapsed' : ''} card-text`}>
                 {cs50cyber_Text}
-                <motion.img 
-                whileHover={{ scale: 1.05 }}
-                className="mt-3 imageQualification" src={cs50cyber}/>
+                <a href="https://cs50.harvard.edu/cybersecurity/2023/" target="blank">
+                    <motion.img 
+                    whileHover={{ scale: 1.05 }}
+                    className="mt-3 imageQualification" src={cs50cyber}/>
+                </a>
                 </p>
             </div>
         </motion.div>

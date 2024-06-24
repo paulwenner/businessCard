@@ -30,9 +30,11 @@ const ExpandableTextCyber50  = () => {
                 <h6 className="card-subtitle mb-2">Porgrammieren mit Python</h6>
                 <p className={`text ${!isExpanded ? 'collapsed' : ''} card-text`}>
                 {cs50p_Text}
-                <motion.img 
-                whileHover={{ scale: 1.05 }}
-                className="mt-3 imageQualification" src={cs50P}/>
+                <a href="https://cs50.harvard.edu/python/2022/" target="_blank" rel="noopener noreferrer">
+                    <motion.img 
+                    whileHover={{ scale: 1.05 }}
+                    className="mt-3 imageQualification" src={cs50P}/>
+                </a>
                 </p>
             </div>
         </motion.div>
