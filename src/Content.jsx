@@ -56,15 +56,15 @@ const WhyMe_Text = () => {
 
 function Content() {
   function openLink(url) {
-            window.open(url, '_blank'); // Öffnet den Link in einem neuen Tab
+            window.open(url, '_blank');
         }
 
 
   return (
     <>
-      <div className="Content-align" style={{ marginTop: "12rem" }}>
+      <div className="Content-align" style={{ marginTop: "12rem", width: "100vw"}}>
         <div id="mainCard" className="over-Card card">
-          <div className="row">
+          <div className="row" style={{margin: "0px"}}>
             <div className="col text-center">
               <img id="profilePic" src={profilePic} className="card-img-top" alt="banner-profile" />
             </div>
@@ -74,7 +74,8 @@ function Content() {
       <div className="text-center move-negative-50">
         <h2 className="card-title">Paul Wenner</h2>
         <h3 className="card-title">Webdesigner und -entwickler</h3>
-      </div>
+      </div> 
+
 
       <FadeInSection>
         <div className="content-section mb-5">
@@ -82,7 +83,7 @@ function Content() {
           <div className="Content-align">
             <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
               <div className="row">
-                <div className="card-text" style={{ fontSize: "1.5rem" }}>
+                <div className="card-text" style={{ fontSize: "1.5rem", padding: "20px"}}>
                   <WhyMe_Text />
                 </div>
               </div>
@@ -94,7 +95,7 @@ function Content() {
                   <Lottie
                     animationData={LinkedInAnimation}
                     loop={false}             
-                    style={{ height: "40vh" }}
+                    style={{ height: "30vh" }}
                   />
                 </motion.div>
               </div>

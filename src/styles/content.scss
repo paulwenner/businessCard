@@ -67,7 +67,6 @@ h2 {
 #profilePic {
     height: auto;
     width: clamp(200px, 400px, 600px);
-    transform: scale(1.2);
     transform-origin: bottom center;
 }
 
@@ -92,3 +91,6 @@ h2 {
     height: 1000px;
 }
 
+.row {
+    --bs-gutter-x: 0 !important; 
+}
