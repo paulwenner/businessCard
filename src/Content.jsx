@@ -110,16 +110,16 @@ function Content() {
           <div className="Content-align">
             <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
               <div id="qualiRow" className="row">
-                <div className="col-xxl-3 col-sm-12 mb-4">
+                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "5px"}}>
                   <ExpandableTextX50 />
                 </div>
-                <div className="col-xxl-3 col-sm-12 mb-4">
+                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "5px"}}>
                   <ExpandableTextP50 />
                 </div>
-                <div className="col-xxl-3 col-sm-12 mb-4">
+                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "5px"}}>
                   <ExpandableTextW50 />
                 </div>
-                <div className="col-xxl-3 col-sm-12 mb-4">
+                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "5px"}}>
                   <ExpandableTextCyber50 />
                 </div>
               </div>
