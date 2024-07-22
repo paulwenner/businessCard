@@ -69,7 +69,7 @@ const Card = () => {
   }, [isFirstVisible]);
 
   return (
-    <>
+    <div id='canvas'>
         <motion.div
             animate={isFirstVisible ? "visible" : "hidden"}
             variants={disappearVariantsUp}
@@ -94,7 +94,7 @@ const Card = () => {
                     <p className="ml-2">paulwenner.de</p>
                     </span>
                     <p className="profile-name">Paul Wenner</p>
-                    <span className="profile-summary">Harvard CS50 zertifizierter freischaffender Entwickler</span>
+                    <span className="profile-summary">Fullstack Software Developer bei Crateflow</span>
                 </div>
                 <div className="profile-pils">
                     <span className="pils"><a href="https://www.instagram.com/_.paulwennr/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i> Instagram</a></span>
@@ -125,6 +125,8 @@ const Card = () => {
             <motion.div
                 id="see-more-button"
                 animate={isFirstVisible ? "more" : "less"}
+                whileHover={isFirstVisible ? "" : { backgroundColor: "#464646"}}
+                style={isFirstVisible ? { backgroundColor: "transparent"} : ""}
                 variants={{
                 more: { top: 0, marginTop : "30px", transition: { duration: 0 } },
                 less: { top: 0, position: "fixed", transition: { duration: 0 } }
@@ -154,7 +156,7 @@ const Card = () => {
                   <Content/>
             </motion.div>
             }   
-    </>
+    </div>
   );
 }
 

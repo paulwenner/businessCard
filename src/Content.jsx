@@ -6,10 +6,13 @@ import LinkedInAnimation from "./assets/LinkedInAnimation.json";
 import "./styles/content.scss";
 import profilePic from "./assets/me.webp";
 import FormsparkForm from "./components/form";
+import ShowMoreText from "react-show-more-text";
+import { scroller } from "react-scroll";
 import ExpandableTextCyber50 from "./qualificationTexts/cs50cyber";
 import ExpandableTextP50 from "./qualificationTexts/cs50p";
 import ExpandableTextW50 from "./qualificationTexts/cs50w";
 import ExpandableTextX50 from "./qualificationTexts/cs50x";
+
 
 const FadeInSection = ({ children }) => {
   const [ref, inView] = useInView({
@@ -32,25 +35,37 @@ const FadeInSection = ({ children }) => {
 
 const WhyMe_Text = () => {
   const lines = [
-    "Ich setze mich seit <b>zweieinhalb Jahren</b> intensiv mit <b>Software Development</b> auseinander.",
-    "In meinen <b>vier belegten CS50 Kursen</b> der <b>Harvard University</b> konnte ich tiefgehende Kenntnisse in verschiedenen <b>Programmiersprachen</b> wie <b>C</b>, <b>Python</b> und <b>SQL</b> erwerben, mich mit <b>Datenstrukturen</b> und <b>Algorithmen</b> auseinandersetzen, wesentliche Prinzipien der <b>Cybersicherheit</b> verstehen und praktische Erfahrungen in der <b>Webentwicklung</b> sammeln.",
-    "Zudem habe ich gelernt, komplexe Probleme zu lösen, effizienten Code zu schreiben und moderne <b>Webtechnologien</b> wie <b>Flask</b>, <b>Django</b> und <b>React</b> zu nutzen.",
-    "Diese Kurse haben mir eine solide Grundlage und wertvolle praktische Fähigkeiten für meine zukünftige Karriere im <b>Software Development</b> gegeben.",
-    "Bei <b>Crateflow</b> arbeite ich als <b>Trainee</b> im Bereich <b>Full-Stack-Entwicklung</b> und habe die Gelegenheit genutzt, meine Fähigkeiten in verschiedenen technischen Bereichen signifikant zu erweitern.",
-    "Besonders intensiv beschäftigte ich mich mit <b>Docker</b> und <b>Nginx</b>, um robuste und skalierbare Lösungen zu entwickeln.",
-    "Im <b>Backend-Bereich</b> programmiere ich <b>APIs</b> mit <b>Django</b> und dem <b>Django REST Framework</b>.",
-    "Parallel dazu entwickle ich im <b>Frontend</b> benutzerfreundliche Interfaces mit <b>React</b> und <b>TypeScript</b>.",
-    "Diese Services verknüpfe ich effizient mittels <b>Docker Compose</b>, um eine nahtlose Integration und Automatisierung zu gewährleisten.",
-  ];
+    "Ich setze mich seit zweieinhalb Jahren intensiv mit Software Development auseinander.",
+    "In meinen vier belegten CS50 Kursen der Harvard University konnte ich tiefgehende Kenntnisse in verschiedenen Programmiersprachen wie C, Python und SQL erwerben, mich mit Datenstrukturen und Algorithmen auseinandersetzen, wesentliche Prinzipien der Cybersicherheit verstehen und praktische Erfahrungen in der Webentwicklung sammeln.",
+    "Zudem habe ich gelernt, komplexe Probleme zu lösen, effizienten Code zu schreiben und moderne Webtechnologien wie Flask, Django und React zu nutzen.",
+    "Diese Kurse haben mir eine solide Grundlage und wertvolle praktische Fähigkeiten für meine zukünftige Karriere im Software Development gegeben.",
+    "Bei Crateflow arbeite ich als Trainee im Bereich Full-Stack-Entwicklung und habe die Gelegenheit genutzt, meine Fähigkeiten in verschiedenen technischen Bereichen signifikant zu erweitern.",
+    "Besonders intensiv beschäftigte ich mich mit Docker und Nginx, um robuste und skalierbare Lösungen zu entwickeln.",
+    "Im Backend-Bereich programmiere ich APIs mit Django und dem Django REST Framework.",
+    "Parallel dazu entwickle ich im Frontend benutzerfreundliche Interfaces mit React und TypeScript.",
+    "Diese Services verknüpfe ich effizient mittels Docker Compose, um eine nahtlose Integration und Automatisierung zu gewährleisten.",
+  ].map((line, index) => (
+    <div key={index} dangerouslySetInnerHTML={{ __html: line }} />
+  ));
 
+  const handleClick = () => {
+    scroller.scrollTo("Qualifikationen", {
+      duration: 0,
+      delay: 0,
+      smooth: "easeInOutQuart"
+    });
+  };
   return (
-    <>
-      {lines.map((line, index) => (
-        <FadeInSection key={index}>
-          <div dangerouslySetInnerHTML={{ __html: line }} />
-        </FadeInSection>
-      ))}
-    </>
+    <ShowMoreText
+      lines={6}
+      more="Mehr anzeigen"
+      less="Weniger anzeigen"
+      anchorClass="show-more-text"
+      expanded={false}
+      onClick={handleClick}
+    >
+      {lines}
+    </ShowMoreText>
   );
 };
 
@@ -62,7 +77,7 @@ function Content() {
 
   return (
     <>
-      <div className="Content-align" style={{ marginTop: "12rem", width: "100vw"}}>
+      <div className="Content-align" style={{ marginTop: "12rem"}}>
         <div id="mainCard" className="over-Card card">
           <div className="row" style={{margin: "0px"}}>
             <div className="col text-center">
@@ -129,11 +144,13 @@ function Content() {
       </FadeInSection>
 
       <FadeInSection>
-        <div className="content-section">
-          <h3 id="Kontakt" className="card-title text-center mb-4">Kontaktieren Sie mich!</h3>
-          <div className="Content-align">
-            <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
-              <FormsparkForm />
+        <div className="d-flex justify-content-center">
+          <div style={{ width: "100%", maxWidth: "900px"}}>
+            <h3 id="Kontakt" className="card-title text-center mb-4">Kontaktieren Sie mich!</h3>
+            <div>
+              <div>
+                <FormsparkForm />
+              </div>
             </div>
           </div>
         </div>

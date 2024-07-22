@@ -15,6 +15,8 @@ const ExpandableTextCyber50  = () => {
 
     return (
         <motion.div 
+        whileHover={{ backgroundColor: "#707370"}}
+        transition={{ duration: 1 }}
         onMouseEnter={() => {
             clearTimeout(timeoutId);
             setIsExpanded(true);
@@ -24,7 +26,7 @@ const ExpandableTextCyber50  = () => {
                 setIsExpanded(false);
             }, 0);
         }}  
-        className="card" style={isExpanded ? { backgroundColor: "#707370"} : { backgroundColor: ""}}>
+        className="card">
             <div className="card-body">
                 <h5 className="card-title">CS50 Cybersecruity</h5>
                 <h6 className="card-subtitle mb-2">Konzepte der Cybersicherheit</h6>

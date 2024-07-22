@@ -8,6 +8,12 @@
     }  
 }
 
+@media screen and (min-width: 1400px) {
+    #qualiRow {
+        height: 900px;
+    } 
+}
+
 @media screen and (max-width: 900px) {
     #qualiRow {
         margin-left: 3%;
@@ -16,7 +22,7 @@
 }
 
 .Content-align {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,6 +60,10 @@ h2 {
     border: none;
     position: relative;
 
+    .quali-card:hover {
+
+    }
+
     .card-text {
         color: white;
     }
@@ -89,10 +99,7 @@ h2 {
     background-size: 20px 20px;
 }
 
-#qualiRow {
-    height: 1000px;
-}
-
 .row {
     --bs-gutter-x: 0 !important; 
 }
+

@@ -2,7 +2,7 @@ import React, { useState, } from "react";
 import "../styles/textsCss/expandableText.scss";
 import cs50X from "../assets/cs50X.webp";
 import "../styles/content.scss";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { cs50x_Text } from '../texts';
 
 const ExpandableTextCyber50  = () => {
@@ -15,6 +15,8 @@ const ExpandableTextCyber50  = () => {
 
     return (
         <motion.div 
+        whileHover={{ backgroundColor: "#707370"}}
+        transition={{ duration: 1 }}
         onMouseEnter={() => {
             clearTimeout(timeoutId);
             setIsExpanded(true);
@@ -24,7 +26,7 @@ const ExpandableTextCyber50  = () => {
                 setIsExpanded(false);
             }, 0);
         }} 
-        className="card" style={isExpanded ? { backgroundColor: "#707370"} : { backgroundColor: ""}}>
+        className="card">
             <div className="card-body">
                 <h5 className="card-title">CS50x</h5>
                 <h6 className="card-subtitle mb-2">Grundkenntnisse der Informatik</h6>
