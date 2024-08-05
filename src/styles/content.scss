@@ -60,10 +60,6 @@ h2 {
     border: none;
     position: relative;
 
-    .quali-card:hover {
-
-    }
-
     .card-text {
         color: white;
     }
@@ -97,9 +93,61 @@ h2 {
         linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
         linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 20px 20px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
 }
 
 .row {
     --bs-gutter-x: 0 !important; 
 }
 
+
+@media screen and (min-width: 1921px){
+    #cage {
+        max-width: 3000px;
+    }
+    h2 {
+        font-size: 200px !important;
+    }
+    h3 {
+        font-size: 120px !important;
+    }
+    #profilePic {
+        width: 800px !important;
+    }
+    #mainCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 2px);
+    background-size: 40px 40px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    }
+    #WhyMeText {
+        font-size: 40px !important;
+    }
+    #Kontakt {
+        font-size: 60px !important;
+    }
+    #KontaktContainer {
+        max-width: 2000px !important;
+    }
+    #qualiRow {
+        font-size: 30px !important;
+        height: 1800px;
+
+        h5 {
+            font-size: 50px !important;
+        }
+        h6 {
+            font-size: 30px !important;
+        }
+    }
+    
+}

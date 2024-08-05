@@ -70,92 +70,94 @@ const Card = () => {
 
   return (
     <div id='canvas'>
-        <motion.div
-            animate={isFirstVisible ? "visible" : "hidden"}
-            variants={disappearVariantsUp}
-            id="Card"
-        >
-            
-            <div 
-            className="mobile-pic-container">
-                <img className="mobile-pic" src={ProfilePic} alt="Profile" />
-            </div>
-            <div 
-            id="container" 
-            className="theme--dark">
-                <input id="menu" type="checkbox" />
-                <div className="header">
-                <div className="logo"></div>
-                </div>
-                <section className="left-section">
-                <img className="profile-pic" src={ProfilePic} alt="Profile" />
-                <div className="profile-detail">
-                    <span className="profile-maps">
-                    <p className="ml-2">paulwenner.de</p>
-                    </span>
-                    <p className="profile-name">Paul Wenner</p>
-                    <span className="profile-summary">Fullstack Software Developer bei Crateflow</span>
-                </div>
-                <div className="profile-pils">
-                    <span className="pils"><a href="https://www.instagram.com/_.paulwennr/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i> Instagram</a></span>
-                    <span className="pils"><a href="https://www.linkedin.com/in/paul-wenner-94780128b/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin"></i> LinkedIn </a></span>
-                    <span className="pils"><a href="https://github.com/paulwenner" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i> Github </a></span>
-                    <span className="pils"><a onClick={toggleVisibility} href="#" rel="noopener noreferrer"><i className="fa-solid fa-envelope"></i> Mail</a></span>
-                </div>
-                </section>
-                <div className="front-smooth"></div>
-                </div>
-                <div id="mail-container"  className={`slide-in ${isVisible ? 'active' : ''}`}>
-                <div className="container">
-                    <div className={`copy-text ${emailCopied ? 'active' : ''}`}>
-                    <input type="text" className="text" value="paul@paulwenner.de" readOnly />
-                    <motion.button 
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className={`${emailCopied ? 'push' : 'unpush'}`} 
-                    onPointerUp={() => copyTextToClipboard("paul@paulwenner.de")}>
-                        <i className={`${emailCopied ? 'fa-solid fa-clone' : 'fa fa-clone'}`}></i>
-                        </motion.button>
-                    </div>
-                </div>
-                </div>
-            </motion.div>
+          <motion.div
+              animate={isFirstVisible ? "visible" : "hidden"}
+              variants={disappearVariantsUp}
+              id="Card"
+          >
+              
+              <div 
+              className="mobile-pic-container">
+                  <img className="mobile-pic" src={ProfilePic} alt="Profile" />
+              </div>
+              <div 
+              id="container" 
+              className="theme--dark">
+                  <input id="menu" type="checkbox" />
+                  <div className="header">
+                  <div className="logo"></div>
+                  </div>
+                  <section className="left-section">
+                  <img className="profile-pic" src={ProfilePic} alt="Profile" />
+                  <div className="profile-detail">
+                      <p className="profile-maps">
+                      <p className="ml-2">paulwenner.de</p>
+                      </p>
+                      <p className="profile-name">Paul Wenner</p>
+                      <p className="profile-summary">Fullstack Software Developer bei Crateflow</p>
+                  </div>
+                  <div className="profile-pils">
+                      <span className="pils"><a href="https://www.instagram.com/_.paulwennr/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram"></i> Instagram</a></span>
+                      <span className="pils"><a href="https://www.linkedin.com/in/paul-wenner-94780128b/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin"></i> LinkedIn </a></span>
+                      <span className="pils"><a href="https://github.com/paulwenner" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i> Github </a></span>
+                      <span className="pils"><a onClick={toggleVisibility} href="#" rel="noopener noreferrer"><i className="fa-solid fa-envelope"></i> Mail</a></span>
+                  </div>
+                  </section>
+                  <div className="front-smooth"></div>
+                  </div>
+                  <div id="mail-container"  className={`slide-in ${isVisible ? 'active' : ''}`}>
+                  <div className="container">
+                      <div className={`copy-text ${emailCopied ? 'active' : ''}`}>
+                      <input type="text" className="text" value="paul@paulwenner.de" readOnly />
+                      <motion.button 
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className={`${emailCopied ? 'push' : 'unpush'}`} 
+                      onPointerUp={() => copyTextToClipboard("paul@paulwenner.de")}>
+                          <i className={`${emailCopied ? 'fa-solid fa-clone' : 'fa fa-clone'}`}></i>
+                          </motion.button>
+                      </div>
+                  </div>
+                  </div>
+              </motion.div>
 
-            
-            <motion.div
-                id="see-more-button"
-                animate={isFirstVisible ? "more" : "less"}
-                whileHover={isFirstVisible ? "" : { backgroundColor: "#464646"}}
-                style={isFirstVisible ? { backgroundColor: "transparent"} : ""}
-                variants={{
-                more: { top: 0, marginTop : "30px", transition: { duration: 0 } },
-                less: { top: 0, position: "fixed", transition: { duration: 0 } }
-                }}
-                onClick={toggleSectorVisibility}
-            >
-                <motion.p
-                className="Seemore-toggle"
-                style={{ cursor: "pointer" }}
-                >
-                {isFirstVisible ? 
-                    <i className="fa-solid fa-chevron-down"></i> 
-                    : 
-                    <i className="fa-solid fa-chevron-up"></i>
-                }
-                {isFirstVisible ? " Mehr erfahren" : " Weniger erfahren"}
-                </motion.p>
-            </motion.div>  
+              
+              <motion.div
+                  id="see-more-button"
+                  animate={isFirstVisible ? "more" : "less"}
+                  whileHover={isFirstVisible ? "" : { backgroundColor: "#464646"}}
+                  style={isFirstVisible ? { backgroundColor: "transparent"} : ""}
+                  variants={{
+                  more: { top: 0, marginTop : "2rem", transition: { duration: 0 } },
+                  less: { top: 0, position: "fixed", transition: { duration: 0 } }
+                  }}
+                  onClick={toggleSectorVisibility}
+              >
+                  <motion.p
+                  className="Seemore-toggle"
+                  style={{ cursor: "pointer" }}
+                  >
+                  {isFirstVisible ? 
+                      <i className="fa-solid fa-chevron-down"></i> 
+                      : 
+                      <i className="fa-solid fa-chevron-up"></i>
+                  }
+                  {isFirstVisible ? " Mehr erfahren" : " Weniger erfahren"}
+                  </motion.p>
+              </motion.div>  
 
-            {showPortfolio &&
-            <motion.div
-                initial="hidden"
-                animate={portfolioVisible ? "visible" : "hidden"}
-                variants={portfolioVariants}
-                id="Portfolio"
+            {showPortfolio && (
+              <div className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
+                <motion.div
+                  initial="hidden"
+                  animate={portfolioVisible ? "visible" : "hidden"}
+                  variants={portfolioVariants}
+                  id="Portfolio"
                 >
-                  <Content/>
-            </motion.div>
-            }   
+                  <Content />
+                </motion.div>
+              </div>
+            )} 
     </div>
   );
 }

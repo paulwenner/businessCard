@@ -76,10 +76,10 @@ function Content() {
 
 
   return (
-    <>
+    <div id="cage">
       <div className="Content-align" style={{ marginTop: "12rem"}}>
         <div id="mainCard" className="over-Card card">
-          <div className="row" style={{margin: "0px"}}>
+          <div className="row">
             <div className="col text-center">
               <img id="profilePic" src={profilePic} className="card-img-top" alt="banner-profile" />
             </div>
@@ -98,7 +98,7 @@ function Content() {
           <div className="Content-align">
             <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
               <div className="row">
-                <div className="card-text" style={{ fontSize: "1.5rem", padding: "20px"}}>
+                <div id="WhyMeText" className="card-text" style={{ fontSize: "1.5rem", padding: "1rem"}}>
                   <WhyMe_Text />
                 </div>
               </div>
@@ -125,16 +125,16 @@ function Content() {
           <div className="Content-align">
             <div className="over-Card card" style={{ backgroundColor: "transparent" }}>
               <div id="qualiRow" className="row">
-                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "5px"}}>
+                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "0.3rem"}}>
                   <ExpandableTextX50 />
                 </div>
-                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "5px"}}>
+                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "0.3rem"}}>
                   <ExpandableTextP50 />
                 </div>
-                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "5px"}}>
+                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "0.3rem"}}>
                   <ExpandableTextW50 />
                 </div>
-                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "5px"}}>
+                <div className="col-xxl-3 col-sm-12 mb-4" style={{padding: "0.3rem"}}>
                   <ExpandableTextCyber50 />
                 </div>
               </div>
@@ -145,7 +145,7 @@ function Content() {
 
       <FadeInSection>
         <div className="d-flex justify-content-center">
-          <div style={{ width: "100%", maxWidth: "900px"}}>
+          <div id="KontaktContainer" style={{ width: "100%", maxWidth: "60rem"}}>
             <h3 id="Kontakt" className="card-title text-center mb-4">Kontaktieren Sie mich!</h3>
             <div>
               <div>
@@ -155,7 +155,7 @@ function Content() {
           </div>
         </div>
       </FadeInSection>
-    </>
+    </div>
   );
 }
 
